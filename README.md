@@ -32,8 +32,10 @@ OR
 demonstration videos : https://drive.google.com/file/d/169zvuIrPbDb9XweUvsrs5P6hnLPzA1qd/view
 
 
-Android APP:        ![Screenshot_20250617_175330](https://github.com/user-attachments/assets/76d2afa9-a0e7-4189-a6ca-bf2c21e107c2)
-
+Android APP: <p align="center">
+  <img src="https://github.com/user-attachments/assets/76d2afa9-a0e7-4189-a6ca-bf2c21e107c2" width="300"/>
+</p>
+     
 
 
 🧠 How It Works
