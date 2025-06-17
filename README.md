@@ -134,7 +134,7 @@ Testing the alert system
 
 Sending drowsiness alert manually
 
-(Optional: Add APK link or QR code)
+Android-App.......
 
 ✅ Applications
 Smart Vehicle Safety Systems
