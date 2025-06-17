@@ -1,5 +1,7 @@
 🚗 Car Security System with Drowsiness Detection using IoT
-<img width="398" alt="Screenshot 2025-04-26 222337" src="https://github.com/user-attachments/assets/01c88494-7cd1-441d-b5e4-dd8d92c0246a" />
+
+![1f_pages-to-jpg-0001](https://github.com/user-attachments/assets/c5dc057d-1e03-48f9-8c82-7d6263895de6)
+
 
 An advanced IoT-based car security system that ensures both driver safety and vehicle protection using a combination of drowsiness detection, buzzer/hazard alerts, RFID & biometric access, relay control, and audio playback — all orchestrated through an ESP32-based intelligent control unit.
 
