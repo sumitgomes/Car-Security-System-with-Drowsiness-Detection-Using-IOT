@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realtime Drowsiness Detection System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        /* Fullscreen Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        /* Status Box */
+        .status-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            width: 40%;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        #status {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .alert {
+            color: red;
+        }
+
+        /* Video Feed */
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 55%;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border: 3px solid white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Buttons */
+        button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff5722;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+    </style>
+    <script>
+        function updateStatus() {
+            fetch('/status')
+            .then(response => response.json())
+            .then(data => {
+                let statusElement = document.getElementById("status");
+                statusElement.innerText = "Status: " + data.status;
+
+                // Change color based on sleep detection
+                if (data.status === "SLEEPING !!!") {
+                    statusElement.classList.add("alert");
+                } else {
+                    statusElement.classList.remove("alert");
+                }
+            })
+            .catch(error => console.error("Error fetching status:", error));
+        }
+
+        // Update status every 1 second
+        setInterval(updateStatus, 1000);
+    </script>
+</head>
+<body>
+
+    <!-- Fullscreen Video Background -->
+    <video class="video-background" autoplay loop muted playsinline>
+        <source src="{{ url_for('static', filename='background.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <div class="container">
+        <!-- Status Box -->
+        <div class="status-container">
+            <h1>Realtime Drowsiness Detection System</h1>
+            <p id="status">Status: {{ status }}</p>
+        </div>
+
+        <!-- Live Camera Feed -->
+        <div class="video-container">
+            <h2>Live Camera Feed</h2>
+            <img src="/video" alt="Camera Feed">
+            <br>
+            <button onclick="location.reload()">Reload Page</button>
+        </div>
+    </div>
+
+</body>
+</html>
