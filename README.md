@@ -154,7 +154,7 @@ Accident Prevention Solutions
 👤 Author
 Sumit Gomes
 💼 IoT | Embedded Systems | Security Projects
-🔗 LinkedIn • GitHub
+🔗 LinkedIn : https://www.linkedin.com/in/sumitgomes/ • GitHub
 
 📄 License
 This project is licensed under the MIT License — feel free to use and contribute!
