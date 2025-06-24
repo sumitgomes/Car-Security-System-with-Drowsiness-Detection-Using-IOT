@@ -157,6 +157,7 @@ Sumit Gomes
 🔗 LinkedIn : https://www.linkedin.com/in/sumitgomes/ • GitHub
 
 📄 License
+![License: Proprietary](https://img.shields.io/badge/license-Proprietary-red.svg)
 > ⚠️ **Legal Notice**  
 > This project is protected by copyright. All rights reserved.  
 > Unauthorized use or duplication is strictly prohibited.
