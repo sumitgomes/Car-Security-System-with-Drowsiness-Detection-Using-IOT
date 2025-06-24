@@ -157,5 +157,8 @@ Sumit Gomes
 🔗 LinkedIn : https://www.linkedin.com/in/sumitgomes/ • GitHub
 
 📄 License
-This project is licensed under the MIT License — feel free to use and contribute!
+> ⚠️ **Legal Notice**  
+> This project is protected by copyright. All rights reserved.  
+> Unauthorized use or duplication is strictly prohibited.
+
 
